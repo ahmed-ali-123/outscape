@@ -750,7 +750,7 @@ textarea {
 }
 .contact-page button {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   border: none;
   background-color: rgba(0, 0, 0, 0.13);
   padding: 10px;
@@ -760,4 +760,44 @@ textarea {
 }
 .contactpagelast:after {
   background-color: #263135 !important  ;
+}
+.navbar-toggler {
+  outline: none !important;
+}
+@media (max-width: 980px) {
+  .productcardm0 {
+    margin: 0 !important;
+  }
+  .productcardm0:nth-child(1) {
+    margin-bottom: 50px;
+  }
+  #section-products {
+    padding-bottom: 50px !important;
+  }
+  .aboutrow:nth-child(1) {
+    padding-bottom: 50px !important;
+  }
+  .productsheading {
+    margin-top: 40px !important;
+  }
+  .aboutrow {
+    margin-bottom: 0 !important;
+  }
+  .aboutheading,
+  .achievementHeading,
+  .consultationHeading {
+    margin-top: 50px !important;
+  }
+  .counters {
+    margin-bottom: 0 !important;
+  }
+  #section-faq {
+    padding-bottom: 100px !important;
+  }
+  .aboutproductone {
+    margin-bottom: 40px !important;
+  }
+  .productoone {
+    margin-bottom: 40px !important;
+  }
 }
