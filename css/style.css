@@ -801,3 +801,12 @@ textarea {
     margin-bottom: 40px !important;
   }
 }
+@media (max-width: 767px) {
+  .contact-page button {
+    margin-bottom: 0px !important;
+  }
+}
+.consultationHeading {
+  max-width: 90vw;
+  margin-bottom: 50px !important;
+}
