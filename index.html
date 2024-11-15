@@ -292,7 +292,7 @@
                   weather-resistant materials, our products are designed to look
                   great and last, if you are interested, feel free to contact us
                   at
-                  <a href="#">info@yourdomain.com</a>
+                  <a href="#">info@outscape.live</a>
                 </p>
               </div>
             </div>
@@ -390,13 +390,14 @@
     >
       <div class="contact-page">
         <h1 class="consultationHeading">Book a free consultation</h1>
-        <form class="inputs">
+        <form class="inputs" id="form">
           <label for="name">Name</label>
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Enter your name"
+            required
           />
           <label for="email">Email</label>
           <input
@@ -404,6 +405,7 @@
             id="email"
             name="email"
             placeholder="Enter your email"
+            required
           />
           <label for="phone">Phone</label>
           <input
@@ -411,21 +413,26 @@
             id="phone"
             name="phone"
             placeholder="Enter your Phone"
+            required
           />
           <label for="address">Address</label>
           <textarea
             id="address"
             name="address"
             placeholder="Enter your address"
+            required
           ></textarea>
           <label for="message">Message</label>
           <textarea
             id="message"
             name="message"
             placeholder="Enter your message"
+            required
           ></textarea>
+          <input type="text" name="from_name" value="a user" hidden />
+          <input type="text" name="page" value="home" hidden />
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="button">Submit</button>
         </form>
       </div>
     </section>
@@ -498,6 +505,15 @@
         />
       </svg>
     </div>
+    >
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("fCEB0-6Ldvz_SWI-X");
+    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

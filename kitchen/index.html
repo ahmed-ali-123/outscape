@@ -107,7 +107,7 @@
       id="ftco-navbar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="../index.html">
           <img src="./images/logo.png" alt="logo" style="height: 50px" />
         </a>
         <button
@@ -124,14 +124,6 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a
-                href="../index.html"
-                style="color: black"
-                class="nav-link backButton"
-                >Back</a
-              >
-            </li>
             <li class="nav-item active">
               <a
                 href="#section-counter"
@@ -152,11 +144,7 @@
     />
 
     <section class="mainproductpagecontainer">
-      <img
-        src="https://cdn.shopify.com/s/files/1/0671/3981/files/Hero_Image_34df5fc8-f86f-4249-bb84-860f646fc66c.jpg?v=1709815707"
-        class="mainImage"
-        alt="image of a pergola"
-      />
+      <img src="./images/k4.jpeg" class="mainImage" alt="image of a pergola" />
       <h1 class="mainHeading">
         Elevate Your Outdoor Living with a Custom Outdoor Kitchen
       </h1>
@@ -245,13 +233,14 @@
     >
       <div class="contact-page">
         <h1 class="consultationHeading">Book a free consultation</h1>
-        <form class="inputs">
+        <form class="inputs" id="form">
           <label for="name">Name</label>
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Enter your name"
+            required
           />
           <label for="email">Email</label>
           <input
@@ -259,6 +248,7 @@
             id="email"
             name="email"
             placeholder="Enter your email"
+            required
           />
           <label for="phone">Phone</label>
           <input
@@ -266,21 +256,26 @@
             id="phone"
             name="phone"
             placeholder="Enter your Phone"
+            required
           />
           <label for="address">Address</label>
           <textarea
             id="address"
             name="address"
             placeholder="Enter your address"
+            required
           ></textarea>
           <label for="message">Message</label>
           <textarea
             id="message"
             name="message"
             placeholder="Enter your message"
+            required
           ></textarea>
+          <input type="text" name="from_name" value="a user" hidden />
+          <input type="text" name="page" value="outdoor kitchen" hidden />
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="button">Submit</button>
         </form>
       </div>
     </section>
@@ -353,6 +348,14 @@
         />
       </svg>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("fCEB0-6Ldvz_SWI-X");
+    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

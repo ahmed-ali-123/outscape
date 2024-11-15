@@ -180,3 +180,36 @@ $(document).ready(function ($) {
 let handleWhatsappClick = () => {
   window.open("https://wa.me/+18322088990", "_blank");
 };
+const btn = document.getElementById("button");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.innerText = "Submitting...";
+
+  const serviceID = "service_0qoiqxc";
+  const templateID = "template_s3admz3";
+  const templateID2 = "template_ybm3icc";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      emailjs.sendForm(serviceID, templateID2, this).then(
+        () => {
+          btn.innerText = "Submit";
+          alert(
+            "We have recieved your information, we will reach out to you as soon as possible!"
+          );
+          document.getElementById("form").reset();
+        },
+        (err) => {
+          btn.innerText = "Submit";
+          alert(JSON.stringify(err));
+        }
+      );
+    },
+    (err) => {
+      btn.innerText = "Submit";
+      alert(JSON.stringify(err));
+    }
+  );
+});
