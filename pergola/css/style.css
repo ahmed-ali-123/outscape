@@ -957,3 +957,36 @@ textarea {
     color: white !important;
   }
 }
+.whatsappicon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.quotebutton {
+  position: relative;
+  color: white !important;
+}
+.quotebutton::after {
+  content: "";
+  background-color: #4586ff;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  .quotebutton {
+    padding: 0 10px;
+    width: 180px;
+    text-align: center;
+  }
+}
